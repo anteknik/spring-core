@@ -6,10 +6,10 @@
 	<bean id="greeting" class="net.nadisa.anan.Greetings">
 		<property name="message" value="Hello Spring"></property>
 	</bean>	
-	<bean id="contextStart" class="net.nadisa.anan.listener.ContextStartListener"/>
-	<bean id="contextStop" class="net.nadisa.anan.listener.ContextStopListener"/>
-	<bean id="contextClose" class="net.nadisa.anan.listener.ContextCloseListener"/>
-	<bean id="contextRefresh" class="net.nadisa.anan.listener.ContextRefreshListener"/>
+	
+	<bean id="eventHandler" class="net.nadisa.anan.event.UserDefinedEventHandler"/>
+	
+	<bean id="eventPublisher" class="net.nadisa.anan.event.publisher.UserDefinedEventPublisher"/>
 </beans>
 <!-- Instead of putting init and destroy method under bean can also put as a default method in beans
 <beans default-init-method="init" default-destroy-method="destroy">
