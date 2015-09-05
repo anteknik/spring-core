@@ -1,13 +1,12 @@
 package net.nadisa.anan;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.FileSystemResource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class Application {
 	public static void main(String[] args) {
-		//BeanFactory factory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("beans.xml"));
+
+		ApplicationContext factory = new FileSystemXmlApplicationContext("beans.xml");
 		Greetings greetings = (Greetings) factory.getBean("greeting");
 		System.out.println(greetings.getMessage());
 	}
