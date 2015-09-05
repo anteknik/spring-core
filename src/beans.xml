@@ -2,9 +2,16 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
     "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
     
-<beans>
-	<!-- Lets create bean for Greetings -->
-	<bean id="greeting" class="net.nadisa.anan.Greetings">
+<!--<beans>
+	<bean id="greeting" class="net.nadisa.anan.Greetings" init-method="init" destroy-method="destroy">
 		<property name="message" value="Hello Spring"></property>
+	</bean>	
+</beans>-->
+<!-- Instead of putting init and destroy method under bean can also put as a default method in beans -->
+<beans default-init-method="init" default-destroy-method="destroy">
+	<bean id="greeting" class="net.nadisa.anan.Greetings">
+		<property name="message" value="Hello Spring"/>
 	</bean>
+	
+	<bean id="processor" class="net.nadisa.anan.Processor"/>
 </beans>

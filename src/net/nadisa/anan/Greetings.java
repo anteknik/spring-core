@@ -11,4 +11,12 @@ public class Greetings {
 		this.message = message;
 	}
 
+	// need to create init and destroy method
+	public void init() {
+		System.out.println("Initialize Bean");
+	}
+
+	public void destroy() {
+		System.out.println("Destroy Bean");
+	}
 }
