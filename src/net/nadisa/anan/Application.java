@@ -10,11 +10,11 @@ public class Application {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		//ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Greetings greetings = (Greetings) context.getBean("greeting");
-		System.out.println(greetings.getMessage());
+		System.out.println(greetings +" :"+greetings.getMessage());
 
 		Greetings greetings2 = (Greetings) context.getBean("greeting");
 		greetings2.setMessage("Hello Spring 2");
-		System.out.println(greetings2 + " : " + greetings.getMessage());
+		System.out.println(greetings2 + " : " + greetings2.getMessage());
 		context.registerShutdownHook();
 	}
 }
