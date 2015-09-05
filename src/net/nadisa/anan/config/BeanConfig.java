@@ -1,16 +1,15 @@
-package net.nadisa.anan;
+package net.nadisa.anan.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+
+import net.nadisa.anan.entities.Greetings;
+
 
 @Configuration
 public class BeanConfig {
 
 	@Bean
-	// Default scope singleton 
-	@Scope
-	//@Scope(value = "prototype")
 	public Greetings createGreetings() {
 		Greetings greetings = new Greetings();
 		greetings.setMessage("Hello Spring");
