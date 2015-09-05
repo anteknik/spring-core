@@ -3,19 +3,7 @@
     "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
     
 <beans>
-	<bean id="greeting" class="net.nadisa.anan.Greetings">
-		<property name="message" value="Hello Spring"></property>
-	</bean>	
-	
-	<bean id="eventHandler" class="net.nadisa.anan.event.UserDefinedEventHandler"/>
-	
-	<bean id="eventPublisher" class="net.nadisa.anan.event.publisher.UserDefinedEventPublisher"/>
-</beans>
-<!-- Instead of putting init and destroy method under bean can also put as a default method in beans
-<beans default-init-method="init" default-destroy-method="destroy">
-	<bean id="greeting" class="net.nadisa.anan.Greetings">
+	<bean id="greeting" class="net.nadisa.anan.Greetings" scope="prototype" init-method="init" destroy-method="destroy">
 		<property name="message" value="Hello Spring"/>
-	</bean>
-	
-	<bean id="processor" class="net.nadisa.anan.Processor"/>
-</beans> -->
+	</bean>	
+</beans>
