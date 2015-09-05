@@ -1,4 +1,4 @@
-package net.nadisa.anan.entities;
+package net.nadisa.anan;
 
 public class Greetings2 {
 	private String message;

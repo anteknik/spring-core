@@ -7,6 +7,15 @@
 		http://www.springframework.org/schema/context 
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	
-	<context:annotation-config />
-    
+	
+    <!-- Lets create bean for Greetings -->
+	<bean id="greetings" class="net.nadisa.anan.Greetings"/>
+	
+	<!-- <bean id="greetings2" class="net.nadisa.anan.Greetings2">
+		<property name="message" value="Hello Spring"></property>
+	</bean> -->
+	
+	<bean id="newGreetings" class="net.nadisa.anan.Greetings2">
+		<property name="message" value="Hello Spring"/>
+	</bean>
 </beans>
